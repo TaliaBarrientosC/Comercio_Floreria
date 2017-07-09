@@ -12,6 +12,7 @@ namespace TiendaComercio.Controllers
         public ActionResult Index()
         {
             //cambio local 
+            //otro cambio
             return View();
         }
         public ActionResult Buscar()
