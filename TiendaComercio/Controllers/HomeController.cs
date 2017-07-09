@@ -11,6 +11,7 @@ namespace TiendaComercio.Controllers
         // GET: Home
         public ActionResult Index()
         {
+            //cambio local
             return View();
         }
         public ActionResult Buscar()
