@@ -232,16 +232,14 @@
                         <li><a href="mail.html">Mail Us</a></li>
 
                          <!--<li><a href="products.html">   -->
-                        <li>
-                            <form class="navbar-form pull-right" action="#" method="get" />
-                            <button type="submit" value="Send"></span></button>
-                            <input type="text" class="span1" name="search" id="navSearchInput" />
-
-                            </form>
-                            </a>
-                        </li>
+                        
+                            <form class="navbar-form pull-right" action="@Url.Action("Buscar","Home")" method="get">
+                                <button type="submit" name="Send"><span class="icon-search"></span></button>
+                                <input type="text" class="span1" name="id" id="navSearchInput" />
+                            </form>    <!--</a> -->
+                         
                             <!-- </li>  -->
-</ul>
+                       </ul>
                 </div>
             </nav>
         </div>

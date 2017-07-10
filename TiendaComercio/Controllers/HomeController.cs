@@ -8,16 +8,19 @@ namespace TiendaComercio.Controllers
 {
     public class HomeController : Controller
     {
+        private Models.TiendaaEntities bd = new Models.TiendaaEntities();
+        
         // GET: Home
         public ActionResult Index()
         {
-            //cambio local 
-            //otro cambio
             return View();
         }
-        public ActionResult Buscar()
+        public ActionResult Buscar(string id="")
         {
-            return View();
+            //logica de acceso a bd
+            var productos = bd.Producto.Where(x=>x.Descripcion.Contains(id));
+            //lista de productos
+            return View(productos);
         }
         public ActionResult Producto(string id)
         {

@@ -43,11 +43,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -89,6 +99,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Tiendaa.mdf" />
+    <Content Include="App_Data\Tiendaa_log.ldf">
+      <DependentUpon>Tiendaa.mdf</DependentUpon>
+    </Content>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\fasthover.css" />
     <Content Include="css\flexslider.css" />
@@ -97,6 +114,7 @@
     <Content Include="css\popuo-box.css" />
     <Content Include="css\style.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="images\1.jpg" />
     <Content Include="images\10.jpg" />
@@ -236,13 +254,61 @@
     <Content Include="js\jquery.wmuSlider.js" />
     <Content Include="js\minicart.js" />
     <Content Include="js\script.js" />
+    <Content Include="Models\ModelTiendaa.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelTiendaa.edmx</DependentUpon>
+      <LastGenOutput>ModelTiendaa.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ModelTiendaa.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelTiendaa.edmx</DependentUpon>
+      <LastGenOutput>ModelTiendaa.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\admiin\admiinAreaRegistration.cs" />
+    <Compile Include="Areas\admiin\Controllers\ProductoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cliente.cs">
+      <DependentUpon>ModelTiendaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelTiendaa.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelTiendaa.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelTiendaa.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelTiendaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelTiendaa.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelTiendaa.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Pedido.cs">
+      <DependentUpon>ModelTiendaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PedidoDetalle.cs">
+      <DependentUpon>ModelTiendaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Producto.cs">
+      <DependentUpon>ModelTiendaa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductoImagen.cs">
+      <DependentUpon>ModelTiendaa.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -261,6 +327,24 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Views\Home\Buscar.cshtml" />
     <Content Include="Views\Home\Producto.cshtml" />
+    <Content Include="Areas\admiin\Views\web.config" />
+    <EntityDeploy Include="Models\ModelTiendaa.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelTiendaa.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\ModelTiendaa.edmx.diagram">
+      <DependentUpon>ModelTiendaa.edmx</DependentUpon>
+    </Content>
+    <Content Include="Areas\admiin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\admiin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\admiin\Views\Producto\Create.cshtml" />
+    <Content Include="Areas\admiin\Views\Producto\Delete.cshtml" />
+    <Content Include="Areas\admiin\Views\Producto\Details.cshtml" />
+    <Content Include="Areas\admiin\Views\Producto\Edit.cshtml" />
+    <Content Include="Areas\admiin\Views\Producto\Index.cshtml" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -269,8 +353,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Areas\admiin\Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
