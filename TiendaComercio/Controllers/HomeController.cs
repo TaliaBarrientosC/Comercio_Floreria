@@ -18,7 +18,7 @@ namespace TiendaComercio.Controllers
         public ActionResult Buscar(string id="")
         {
             //logica de acceso a bd
-            var productos = bd.Producto.Where(x=>x.Denominacion.Contains(id)).Take(20).ToList();
+            var productos = bd.Producto.Where(x=>x.Descripcion.Contains(id)).Take(20).ToList();
             //lista de productos
             return View(productos);
         }
