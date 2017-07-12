@@ -243,12 +243,14 @@
     <Content Include="images\tb4.jpg" />
     <Content Include="images\tb5.jpg" />
     <Content Include="images\ÑÑÑÑ.jpg" />
+    <Content Include="ImgProductos\no_disponible.jpg" />
     <Content Include="js\bootstrap-3.1.1.min.js" />
     <Content Include="js\easyResponsiveTabs.js" />
     <Content Include="js\imagezoom.js" />
     <Content Include="js\jquery.countdown.js" />
     <Content Include="js\jquery.flexisel.js" />
     <Content Include="js\jquery.flexslider.js" />
+    <Content Include="js\jquery.form.min.js" />
     <Content Include="js\jquery.magnific-popup.js" />
     <Content Include="js\jquery.min.js" />
     <Content Include="js\jquery.wmuSlider.js" />
@@ -276,6 +278,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\admiin\admiinAreaRegistration.cs" />
     <Compile Include="Areas\admiin\Controllers\ProductoController.cs" />
+    <Compile Include="Areas\admiin\Models\ResponseModel.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -352,9 +355,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Areas\admiin\Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>

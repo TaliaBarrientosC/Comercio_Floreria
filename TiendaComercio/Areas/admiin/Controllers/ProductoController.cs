@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -113,6 +114,36 @@ namespace TiendaComercio.Areas.admiin.Controllers
             db.Producto.Remove(producto);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+        public JsonResult Adjuntar(int ProductoId, HttpPostedFileBase documento)
+        {
+            var respuesta = new Models.ResponseModel
+            {
+                respuesta = true,
+                error = ""
+            };
+
+            if (documento != null)
+            {
+                string adjunto = DateTime.Now.ToString("yyyyMMddHHmmss") + Path.GetExtension(documento.FileName);
+                documento.SaveAs(Server.MapPath("~/ImgProductos/" + adjunto));
+
+                db.ProductoImagen.Add(new ProductoImagen { ProductoId = ProductoId, Imagen = adjunto, Titulo = "Ejemplo", Descripcion = "Ejemplo" });
+                db.SaveChanges();
+
+            }
+            else
+            {
+                respuesta.respuesta = false;
+                respuesta.error = "Debe adjuntar un documento";
+            }
+
+            return Json(respuesta);
+        }
+
+        public PartialViewResult Adjuntos(int ProductoId)
+        {
+            return PartialView(db.ProductoImagen.Where(x => x.ProductoId == ProductoId).ToList());
         }
 
         protected override void Dispose(bool disposing)

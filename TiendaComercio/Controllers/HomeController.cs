@@ -23,10 +23,6 @@ namespace TiendaComercio.Controllers
             ViewBag.clave = id;
             return View(productos);
         }
-        public ActionResult Producto(string id)
-        {
-            ViewBag.producto = id;
-            return View();
-        }
+        
     }
 }
