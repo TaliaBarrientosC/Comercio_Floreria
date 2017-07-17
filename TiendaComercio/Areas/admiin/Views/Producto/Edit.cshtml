@@ -126,5 +126,21 @@
         function CargarAdjuntos() {
             $("#adjuntos-cargados").load("@Url.Content("~/Admiin/Producto/adjuntos?ProductoId=" + Model.ProductoId)");
         }
+        function EliminarImagen(ImagenId) {
+            $.ajax({
+                data: { ProductoImagenId: ImagenId },
+                url: '@Url.Action("EliminarImagen","Producto")',
+                type: 'post',
+                success: function (r) {
+                    if (r.respuesta) {
+                        CargarAdjuntos();
+                    }
+                    else
+                        alert(r.error);
+                },
+                error: function (jqXHR, textStatus, errorThrown) { alert(errorThrown); }
+            });
+        }
+
     </script>
     }
