@@ -23,6 +23,13 @@ namespace TiendaComercio.Controllers
             ViewBag.clave = id;
             return View(productos);
         }
-        
+        public ActionResult Nosotros()
+        {
+            return View();
+        }
+        public ActionResult Contactanos()
+        {
+            return View();
+        }
     }
 }
