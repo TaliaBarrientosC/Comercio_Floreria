@@ -330,7 +330,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Views\Home\Buscar.cshtml" />
-    <Content Include="Views\Home\Producto.cshtml" />
     <Content Include="Areas\admiin\Views\web.config" />
     <EntityDeploy Include="Models\ModelTiendaa.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

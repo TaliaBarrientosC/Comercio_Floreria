@@ -28,40 +28,14 @@
 
                             <div class="clearfix"> </div>
 
-                            @*<div class="w3ls_mobiles_grid_right_grid2">
+                            <div class="w3ls_mobiles_grid_right_grid2">
 
                                     <div class="clearfix"> </div>
-                                </div>*@
+                                </div>
 
                             <div class="w3ls_mobiles_grid_right_grid3">
 
-                                <!-- producto 1 -->
-                                @*<div class="span3 filter--shirts" data-price="529" data-popularity="4" data-size="m|l" data-color="blue|orange" data-brand="adidas">
-                                        <div class="product">
-
-                                            <div class="product-img">
-                                                <div class="picture">
-                                                    <img width="540" height="374" alt="" src="images/dummy/products/product-11.jpg" />
-                                                    <div class="img-overlay">
-                                                        <a class="btn more btn-primary" href="#">More</a>
-                                                        <a class="btn buy btn-danger" href="#">Add to Cart</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="main-titles no-margin">
-                                                <h4 class="title">S/ @item.Precio</h4>
-                                                <h5 class="no-margin isotope--title">@item.Denominacion</h5>
-                                            </div>
-                                            <p class="center-align stars">
-                                                <span class="icon-star stars-clr"></span>
-                                                <span class="icon-star stars-clr"></span>
-                                                <span class="icon-star stars-clr"></span>
-                                                <span class="icon-star stars-clr"></span>
-                                                <span class="icon-star"></span>
-
-                                            </p>
-                                        </div>
-                                    </div>*@
+                                
 
                                 <div class="col-md-4 agileinfo_new_products_grid agileinfo_new_products_grid_mobiles">
                                     <div class="agile_ecommerce_tab_left mobiles_grid">
@@ -102,7 +76,7 @@
             </div>
         </div>
     </div>
-}
+
 <!-- single page de producto 1 -->
 <div class="modal video-modal fade" id="myModal9" tabindex="-1" role="dialog" aria-labelledby="myModal9">
     <div class="modal-dialog" role="document">
@@ -113,11 +87,11 @@
             <section>
                 <div class="modal-body">
                     <div class="col-md-5 modal_body_left">
-                        <img src="~/images/27.jpg" alt=" " class="img-responsive" />
+                        <img src="~/ImgProductos/@img" alt=" " class="img-responsive" />
                     </div>
                     <div class="col-md-7 modal_body_right">
-                        <h4>itemsp.Denominacion </h4>
-                        <p>itemsp.Descripcion</p>
+                        <h4>@item.Denominacion </h4>
+                        <p>@item.Descripcion</p>
                         <div class="rating">
                             <div class="rating-left">
                                 <img src="~/images/star-.png" alt=" " class="img-responsive" />
@@ -137,7 +111,7 @@
                             <div class="clearfix"> </div>
                         </div>
                         <div class="modal_body_right_cart simpleCart_shelfItem">
-                            <p><span>S/. 200</span> <i class="item_price">itemsp.Precio</i></p>
+                            <p><span>S/. 200</span> <i class="item_price">@item.Precio</i></p>
                             <form action="#" method="post">
                                 <input type="hidden" name="cmd" value="_cart" />
                                 <input type="hidden" name="add" value="1" />
@@ -166,7 +140,7 @@
     <!-- single page de producto 1 -->
 
 </div>
-
+}
 <!-- newsletter -->
 <div class="newsletter">
     <div class="container">
