@@ -31,5 +31,6 @@ namespace TiendaComercio.Controllers
         {
             return View();
         }
+        
     }
 }
