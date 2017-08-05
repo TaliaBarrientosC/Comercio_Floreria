@@ -5,8 +5,7 @@
     <!-- for-mobile-apps -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="Electronic Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
-	SmartPhone Compatible web template, free web designs for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <meta name="keywords" content="Floreria Andalucia" />
     <script type="application/x-javascript">
         addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
            function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -43,7 +42,9 @@
     <!-- for bootstrap working -->
     <script type="text/javascript" src="~/js/bootstrap-3.1.1.min.js"></script>
     <!-- //for bootstrap working -->
+
     <!-- header modal -->
+    <!-- login -->
     <div class="modal fade" id="myModal88" tabindex="-1" role="dialog" aria-labelledby="myModal88"
          aria-hidden="true">
         <div class="modal-dialog modal-lg">
@@ -125,16 +126,20 @@
             </div>
         </div>
     </div>
+    <!-- login -->
     <script>
 		$('#myModal88').modal('show');
     </script>
     <!-- header modal -->
+
     <!-- header -->
     <div class="header" id="home1">
         <div class="container">
+            <!-- inagen de usuario -->
             <div class="w3l_login">
                 <a href="#" data-toggle="modal" data-target="#myModal88"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
             </div>
+            <!-- inagen de usuario -->
             <div class="w3l_logo">
                 <h1><a href=http://localhost:54637/Home >Floreria Andalucia<span></span></a></h1>
             </div>
@@ -153,6 +158,7 @@
             </div>
             <!-- search -->
 
+            <!-- imagen cart original-->
             <div class="cart cart box_1">
                 <form action="#" method="post" class="last">
                     <input type="hidden" name="cmd" value="_cart" />
@@ -160,9 +166,17 @@
                     <button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
                 </form>
             </div>
+            <!-- imagen cart original -->
+
+
+
+
+
+
         </div>
     </div>
     <!-- //header -->
+
     <!-- navigation -->
     <div class="navigation">
         <div class="container">
@@ -180,7 +194,7 @@
                     <ul class="nav navbar-nav">
                         <li><a href=http://localhost:54637/Home class="act">Home</a></li>
                         <li><a href=http://localhost:54637/Home/Buscar >Productos</a></li>
-                        <li><a href=http://localhost:54637/Home/Nosotros >Nosotros</a></li>
+                        <li><a href=http://localhost:54637/Home/Carrito >Carrito</a></li>
                         <!--<li class="w3pages">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages <span class="caret"></span></a>
                             <ul class="dropdown-menu">
@@ -189,7 +203,6 @@
                             </ul>
                         </li>  -->
                         <li><a href=http://localhost:54637/Home/Contactanos >Contactanos</a></li>
-
                          <!--<li><a href="products.html">   -->
                         
                             <form class="navbar-form pull-right" action="@Url.Action("Buscar","Home")" method="get">
@@ -204,35 +217,28 @@
     </div>
     <!-- //navigation -->
 
-
-
-
-
     @RenderBody()
     <!-- footer -->
     <div class="footer">
         <div class="container">
             <div class="w3_footer_grids">
-                <div class="col-md-3 w3_footer_grid">
-                    <h3>Contact</h3>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
+                <div class="col-md-4 w3_footer_grid">
+                    <h3>Contacto</h3>
                     <ul class="address">
-                        <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>1234k Avenue, 4th block, <span>New York City.</span></li>
-                        <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">info@example.com</a></li>
+                        <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Jr. Callao 375<span>Ayacucho</span></li>
+                        <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:ventas@andalucia.com">ventas@andalucia.com</a></li>
                         <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 567</li>
                     </ul>
                 </div>
-                <div class="col-md-3 w3_footer_grid">
-                    <h3>Information</h3>
+                <div class="col-md-4 w3_footer_grid">
+                    <h3>Informacion</h3>
                     <ul class="info">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="mail.html">Contact Us</a></li>
-                        <li><a href="codes.html">Short Codes</a></li>
-                        <li><a href="faq.html">FAQ's</a></li>
-                        <li><a href="products.html">Special Products</a></li>
+                        <li><a href="http://localhost:54637/Home">Nosotros</a></li>
+                        <li><a href="http://localhost:54637/Home/Contactanos">Contactanos</a></li>
+                        <li><a href="http://localhost:54637/Home/Buscar">Productos</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3 w3_footer_grid">
+                @*<div class="col-md-3 w3_footer_grid">
                     <h3>Category</h3>
                     <ul class="info">
                         <li><a href="products.html">Mobiles</a></li>
@@ -241,14 +247,13 @@
                         <li><a href="products1.html">Wearables</a></li>
                         <li><a href="products2.html">Kitchen</a></li>
                     </ul>
-                </div>
-                <div class="col-md-3 w3_footer_grid">
-                    <h3>Profile</h3>
+                </div>*@
+                <div class="col-md-4 w3_footer_grid">
+                    <h3>Perfil</h3>
                     <ul class="info">
-                        <li><a href="index.html">Home</a></li>
-                       
+                        <li><a href="http://localhost:54637/Home">Home</a></li>                       
                     </ul>
-                    <h4>Follow Us</h4>
+                    <h4>Siguenos en </h4>
                     <div class="agileits_social_button">
                         <ul>
                             <li><a href="#" class="facebook"> </a></li>
@@ -273,6 +278,7 @@
         </div>
     </div>
     <!-- //footer -->
+
     <!-- cart-js -->
     <script src="~/js/minicart.js"></script>
     <script>
@@ -289,6 +295,88 @@
         	}
         });
     </script>
-    <!-- //cart-js -->
+    <!-- /cart -->
+
+
+    <!--  =====COPIA=====  -->
+
+    <script>
+        $(function () {
+            var carrito = localStorage.getItem("carrito");
+            var productos = [];
+            if (carrito != null) {
+                productos = JSON.parse(carrito);
+                CargaCarrito(productos);
+            }
+        });
+
+
+        function CargaCarrito(productos) {
+            var html = '';
+            var total = 0;
+
+            $("#nroProductosCarrito").text('(' + productos.length + ')');
+
+            $.each(productos, function () {
+                total += this.Precio * this.Cantidad
+                html += '<h5><a href="single.html">' + this.Denominacion + '</a></h5>'+
+                            '<div class="simpleCart_shelfItem">'+
+                                    '<p><span>$380</span> <i class="item_price">S/. ' + this.Precio + '</i></p>'+
+                                    '<form action="#" method="post">'+
+                                        '<input type="hidden" name="cmd" value="_cart" />'+
+                                        '<input type="hidden" name="add" value="1" />'
+                                        '<input type="hidden" name="w3ls_item" value="Mobile Phone1" />'+
+                                        '<input type="hidden" name="amount" value="350.00" />'+
+                                        '<button type="submit" class="w3ls-cart">Add to cart</button>'+
+                                    '</form>'+
+                                '</div>';
+
+            
+                //html += '<div class="item-in-cart clearfix">' +
+                //       '    <div class="image">' +
+                //'             <img src="http://localhost/Admiin/ImgProductos/' + this.Imagen + '"  width="124" height="124" alt="cart item" />' +
+                //'           </div>' +
+                //'           <div class="desc">' +
+                //'                 <strong><a href="product.html">' + this.Denominacion + '</a></strong>' +
+                //'                <span class="light-clr qty">Qty: ' + this.Cantidad + ' &nbsp;' +
+                //'                       <a href="#" class="icon-remove-sign" title="Remove Item"></a>' +
+                //'                    </span>' +
+                //'                </div>' +
+                //'                <div class="price">' +
+                //'                   <strong>S/. ' + this.Precio + '</strong>' +
+                //'               </div>' +
+                //'           </div>';
+            });
+            $('#itemcarrito').html(html);
+            $("#totalCompraCarrito,#totalCarrito").text('S/.' + total);
+        }
+
+        function AgregarCarrito(productoid, denominacion, precio) {
+            var carrito = localStorage.getItem("carrito");
+            var productos = [];
+            if (carrito != null) {
+                productos = JSON.parse(carrito);
+            }
+
+            var itemActual;
+            for (var i = 0; i < productos.length; i++) {
+                if (productos[i].ProductoId == productoid) {
+                    itemActual = productos[i];
+                }
+            }
+            if (!itemActual) {
+                productos.push({ ProductoId: productoid, Denominacion: denominacion, Precio: precio, Cantidad: 1});
+            } else {
+                itemActual.Cantidad++;
+            }
+
+            var jsonStr = JSON.stringify(productos);
+            localStorage.setItem("carrito", jsonStr);
+
+            CargaCarrito(productos);
+
+        }
+
+    </script>
 </body>
 </html>

@@ -23,7 +23,7 @@ namespace TiendaComercio.Controllers
             ViewBag.clave = id;
             return View(productos);
         }
-        public ActionResult Nosotros()
+        public ActionResult Carrito()
         {
             return View();
         }
